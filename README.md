@@ -1,0 +1,1 @@
+It is suitable for developing payment application on the terminal. This payment application interacts with the bank and provides the AIDL interface of the payment function to the terminal payment OPC call. 
