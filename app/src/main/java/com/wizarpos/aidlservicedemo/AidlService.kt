@@ -28,7 +28,7 @@ class AidlService : Service() {
 //			releaseSemaphore()
 		}
 
-		//阻塞-申请令牌
+		//Blocking - Request Token
 		private fun requireSemaphore() {
 			Log.i(TAG, "requireSemaphore In")
 			try {
@@ -41,7 +41,7 @@ class AidlService : Service() {
 			Log.i(TAG, "requireSemaphore Out")
 		}
 
-		//返回令牌
+		//Return token
 		private fun releaseSemaphore() {
 			Log.i(TAG, "releaseSemaphore In")
 			if (semaphore.availablePermits() == 0) {
@@ -96,7 +96,7 @@ class AidlService : Service() {
 
 			aidlProcessCallback?.process(0, "trans procrssing..")
 
-//			requireSemaphore()//阻塞当前服务的线程
+//			requireSemaphore()//Block the thread that is currently serving the service
 
 			return Gson().toJson(globalResult)
 		}
